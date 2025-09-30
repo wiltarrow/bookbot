@@ -12,3 +12,13 @@ def number_of_char(text):
         else:
             chars[i] = 1
     return chars
+
+def sort_on(items):
+    return items["num"]
+
+def sort_chars(collection):
+    pairs = []
+    for i in collection:
+        pairs.append({"char" : i, "num" : collection[i]})
+    pairs.sort(reverse=True, key=sort_on)
+    return(pairs)
